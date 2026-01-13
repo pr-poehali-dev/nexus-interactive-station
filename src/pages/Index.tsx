@@ -3,6 +3,7 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import AIAssistant from '@/components/AIAssistant';
+import AnamorphicNavigation from '@/components/AnamorphicNavigation';
 
 type Module = 'about' | 'projects' | 'skills' | null;
 
@@ -35,6 +36,7 @@ const Index = () => {
       onMouseMove={handleMouseMove}
     >
       <AIAssistant />
+      <AnamorphicNavigation onModuleSelect={setActiveModule} />
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(100)].map((_, i) => (
           <div
