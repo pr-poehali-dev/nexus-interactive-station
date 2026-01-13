@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
+import AIAssistant from '@/components/AIAssistant';
 
 type Module = 'about' | 'projects' | 'skills' | null;
 
@@ -33,6 +34,7 @@ const Index = () => {
       className="min-h-screen bg-gradient-to-br from-[#0a0a1a] via-[#0f0f2a] to-[#1a1a3a] relative overflow-hidden font-mono"
       onMouseMove={handleMouseMove}
     >
+      <AIAssistant />
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(100)].map((_, i) => (
           <div
